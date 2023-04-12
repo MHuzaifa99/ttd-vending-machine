@@ -20,3 +20,18 @@ test("selecting items", () => {
   ]);
 });
 
+// AC2 : As a customer, I want to know how much money I have deposited, so that I know what I can purchase.
+
+// Given I am using the vending machine,
+// when I insert money,
+// then I see the total I have deposited on a screen.
+// deposit(100) returns 'You have deposited Rs 100'
+// The machine should accept bills in these amounts: 10, 20, 50, 100, 500
+
+test("depositing money", () => {
+  //Arrange
+  const machine = new Machine();
+  const result = "You have deposited Rs 100";
+  //Assert
+  expect(machine.deposit(100)).to.be.equal(result);
+});
