@@ -35,3 +35,20 @@ test("depositing money", () => {
   //Assert
   expect(machine.deposit(100)).to.be.equal(result);
 });
+
+  //AC 3:As a customer, I want to add additional money, so that I can use the denominations I have to purchase an item.
+  
+  // Given I have deposited money in the vending machine,
+  // when I deposit additional money,
+  // then I see the new total on a screen.
+  // After depositing Rs 100, deposit(50) returns 'You have deposited Rs 150'
+  
+  test("depositing more money", () => {
+    //Arrange
+    const machine = new Machine();
+    const result = "You have deposited Rs 150";
+    //Act
+    machine.deposit(100);
+    //Assert
+    expect(machine.deposit(50)).to.be.equal(result);
+  });
